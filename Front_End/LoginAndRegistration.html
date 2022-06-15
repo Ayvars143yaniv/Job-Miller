@@ -4,7 +4,12 @@
         <link rel="stylesheet" href="LoginAndRegistration.css">
         <script>
             function clickinner(target) { // Target refers to the clicked element
-                location.href='ContactUs.html';
+                if(target.text == "Contacts"){
+                    location.href='ContactUs.html';
+                }else{
+                    location.href='AboutUs.html'
+                }
+                
             };
             </script>
         </script>
@@ -61,7 +66,7 @@
                             <li><a href="">Submenu item</a></li>
                           </ul>			
                         </li>
-                        <li><a href="">About Us</a></li>
+                        <li><a onclick="javascript:clickinner(this);">About Us</a></li>
                         <li><a onclick="javascript:clickinner(this);">Contacts</a></li>
                       </ul>
                        <!--navigation bar is finished lets run and see-->
