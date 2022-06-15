@@ -1,0 +1,525 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: white;
+}
+
+h1{
+position: relative;
+font-size: 6vw;
+color: transparent;
+-webkit-text-stroke: 0.3vw transparent;
+text-transform: uppercase;
+}
+h2{
+  position: relative;
+  font-size: 2vw;
+  color: rgb(33, 84, 104);
+  -webkit-text-stroke: 0.3vw transparent;
+  text-transform: uppercase;
+  }
+h1::before{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: #633ad4;
+  -webkit-text-stroke: 0vw transparent;
+  border-right: 2px solid transparent;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate
+{
+   0%, 10%, 100%
+   {
+   width: 0;
+   }
+   70%, 90%
+   {
+   width: 100%;
+   }
+   }
+
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  background: #3399ff;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px #508fb9;
+}
+
+.small{
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  bottom: -100px;
+}
+
+.medium{
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  bottom: -200px;
+}
+
+.large{
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  bottom: -300px;
+}
+
+.xlarge{
+  width: 800px;
+  height: 800px;
+  left: -400px;
+  bottom: -400px;
+}
+
+.xxlarge{
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  bottom: -500px;
+}
+
+.shade1{
+  opacity: 0.2;
+}
+.shade2{
+  opacity: 0.5;
+}
+
+.shade3{
+  opacity: 0.7;
+}
+
+.shade4{
+  opacity: 0.8;
+}
+
+.shade5{
+  opacity: 0.9;
+}
+
+@keyframes ripple{
+  0%{
+    transform: scale(0.8);
+  }
+
+  50%{
+    transform: scale(1.2);
+  }
+
+  100%{
+    transform: scale(0.8);
+  }
+}
+
+/*.full-page {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("moonlight.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    *//* this block of code is for setting the background image and position of the image*//*
+}*/
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 50px;
+    background : bar;
+    /* this is for setting the dimension of navigation bar */
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+  nav ul {
+      display: inline-block;
+      list-style: none;
+  }
+
+    nav ul li{
+        display: inline-block;
+        margin-right: 70px;
+        /* this blocks are for styling the list elements*/
+    }
+
+     nav ul li a{
+         text-decoration: none;
+         font-size: 20px;
+         color: black;
+         font-family: emoji;
+     }
+       
+      nav ul li button {
+           font-size: 20px;
+           color: black;
+           outline: none;
+           border: none;
+           background: transparent;
+           cursor: pointer;
+           font-family: emoji;
+      }
+         
+      nav ul li button:hover {
+        color: #3399ff;
+        }
+           
+        nav ul li a:hover {
+            color: #3399ff;
+        }
+          
+        a{
+            text-decoration: none;
+            color: palevioletred;
+            font-size: 28px;
+        }
+        
+
+       
+         
+         .form-box{
+             width: 380px;
+             height: 480px;
+             position: relative;
+             margin: 2% auto;
+             background: rgba(0, 0, 0, 0.3);
+             padding: 10px;
+             overflow: hidden;
+             /* creating the form with width height and etc*/
+         }
+
+        .input-field{
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+        } 
+        
+        .submit-btn{
+            width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: #3399ff;
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+
+        .check-box{
+            margin: 30px 10px 34px 0;
+        }
+
+        span{
+            color: #777;
+            font-size: 12px;
+            bottom: 68px;
+            position: absolute;
+        }
+
+        #login{
+            left: 50px;
+        }
+
+        #login input{
+            color:white;
+            font-size: 15;
+        }
+
+        #register{
+            left: 450px;
+        }
+
+        #register input{
+            color: white;
+            font-size: 15;
+        }
+         
+         .form-box{
+             width: 380px;
+             height: 480px;
+             position: relative;
+             margin: 2% auto;
+             color: transparent;
+             background: rgba(0, 0, 0, 0.02);
+             padding: 10px;
+             overflow: hidden;
+             /* creating the form with width height and etc*/
+         }
+
+          .button-box{
+              width: 220px;
+              margin: 35px auto;
+              position: relative;
+              box-shadow: 0 0 5px 1px #3399ff;
+              border-radius: 30px;
+          }
+           
+            .toggle-btn{
+                padding: 10px 30px;
+                cursor: pointer;
+                background: transparent;
+                border: 0;
+                outline: none;
+                position: relative;
+
+            }
+             #btn{
+                 top: 0;
+                 left: 0;
+                 position: absolute;
+                 width: 110px;
+                 height: 100%;
+                 background: #3399ff;
+                 border-radius: 30px;
+                 transition: .5s;
+             }
+
+             .input-group-login{
+                top: 150px;
+                position: absolute;
+                width: 280px;
+                transition: .5s;
+            }
+
+            .input-group-register{
+                top: 120px;
+                position: absolute;
+                width: 280px;
+                transition: .5s;
+            }
+
+        .input-field{
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+        } 
+        
+        .submit-btn{
+            width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: #3399ff;
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+
+        .check-box{
+            margin: 30px 10px 34px 0;
+        }
+
+        span{
+            color: #777;
+            font-size: 12px;
+            bottom: 68px;
+            position: absolute;
+        }
+
+        #login{
+            left: 50px;
+        }
+
+        #login input{
+            color:white;
+            font-size: 15;
+        }
+
+        #register{
+            left: 450px;
+        }
+
+        #register input{
+            color: white;
+            font-size: 15;
+        }
+    
+       
+    
+        
+       
+         
+
+        
+     /* Clearing floats */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* Mini reset, no margins, paddings or bullets */
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Main level */
+.menu {			
+  margin: 0px;
+  margin-bottom:120px;
+  width: 700px;
+  /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;	
+}
+
+.menu > li {
+  background: #3399ff;
+  margin-right: 0.12ex;
+  padding-right: 0.3;
+  float: left;
+  position: relative;
+  transform: skewX(25deg);
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 12px;
+}		
+
+.menu li:hover {
+  background: #5068ec;
+}		
+
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+
+/* Dropdown */
+.submenu {
+  position: absolute;
+  width: 200px;
+  left: 50%; margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu li {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;		
+}						
+
+.submenu > li > a {
+  padding: 1em 2em;			
+}
+
+.submenu > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;			
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);			
+}		
+
+/* Odd stuff */
+.submenu > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}				
+
+/* Even stuff */
+.submenu > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+
+/* Show dropdown */
+.submenu,
+.submenu li {
+  opacity: 0;
+  visibility: hidden;			
+}
+
+.submenu li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}		
+
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+
+.menu > li:hover .submenu li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
+
+
+

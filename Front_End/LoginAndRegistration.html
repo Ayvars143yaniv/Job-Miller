@@ -1,0 +1,133 @@
+<html>
+    <head><meta charset="UTF-8">
+        <title>Registration And Login Page</title>
+        <link rel="stylesheet" href="LoginAndRegistration.css">
+        <script>
+            function clickinner(target) { // Target refers to the clicked element
+                location.href='ContactUs.html';
+            };
+            </script>
+        </script>
+    </head>
+       <body>
+
+       <div class='ripple-background'>
+           <div class='circle xxlarge shade1'></div>
+           <div class='circle xlarge shade2'></div>
+           <div class='circle large shade3'></div>
+           <div class='circle mediun shade4'></div>
+           <div class='circle small shade5'></div>
+       </div>
+       <div><h1 data-text="JOB">JOB &nbsp;</h1>
+        <h1 data-text="MILLER">MILLER</h1>
+        <h2 data-text="Easiest Way To Find Jobs">Easiest Way To Find Jobs</h2>
+    </div>
+       
+     
+      
+       
+           <div class="full-page">
+               <div class="navbar">
+
+                 <!--- this is logo you can place a img here--->
+                    <!--<nav>
+                        <ul id='MenuItems'>
+                            <li><a href='#'>Home</a></li>
+                            <li><a href='#'>Services</a>
+                               <ul>
+                                   <li><a href="#">type1</a></li>
+                                   <li><a href="#">type2</a></li>
+                                   <li><a href="#">type3</a></li>
+                               </ul>      
+                            </li>
+                            <li><a href='#'>Contact</a>
+                              
+                            </li>
+                            <li><a href='#'>About Us</a>
+                               
+                            </li>
+                            
+                        </ul>
+                    </nav> -->
+                    
+                    <ul class="menu cf">
+                        <li><a href="">Home</a></li>
+                        <li>
+                          <a href="">Services</a>
+                          <ul class="submenu">
+                            <li><a href="">Submenu item</a></li>
+                            <li><a href="">Submenu item</a></li>
+                            <li><a href="">Submenu item</a></li>
+                            <li><a href="">Submenu item</a></li>
+                          </ul>			
+                        </li>
+                        <li><a href="">About Us</a></li>
+                        <li><a onclick="javascript:clickinner(this);">Contacts</a></li>
+                      </ul>
+                       <!--navigation bar is finished lets run and see-->
+                       <!---now let us make the styling for login page --->
+               </div>
+               <div id='login-form' class='login-page'>
+                <!-- creating the form-box-->
+                <div class="form-box">
+                    <div class='button-box'>
+                        <div id='btn'></div> 
+                        <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+                        <button type='button' onclick='register()' class='toggle-btn' >Register</button>
+                        </div>
+                        <!--creating login form-->
+
+                          <form id='login' class='input-group-login'>                       
+                            <input type='text' class='input-field' placeholder='Email Id' required>
+                            <input type='Password' class='input-field' placeholder='Enter Password' required>
+                            <input type='checkbox' class='check-box'>  
+                            <span>Remember Password</span>
+                            <button type='submit' class='submit-btn'>Log In</button>
+                        </form>
+                        <!--creating the registration form-->
+                         <form id='register' class='input-group-register'>
+                             <input type='text' class='input-field' placeholder='First Name' required>
+                             <input type='text' class='input-field' placeholder='Last Name' required>
+                             <input type='email' class='input-field' placeholder='Email Id' required>
+                             <input type='password' class='input-field' placeholder='Password' required>
+                             <input type='password' class='input-field' placeholder='Confirm Password' required>
+                             <input type='checkbox' class='check-box'> <span>I agree to the terms and conditions</span> 
+                             <button type='submit' class='submit-btn'>Register</button>
+                         </form>
+                         <!-- now let us style the form page-->
+                    </div>
+                </div>
+            </div>
+             <br>
+            
+            
+            <!--te first script ode is for login and registration form to move correctly--->
+            <script>
+                var x= document.getElementById("login");
+                var y= document.getElementById("register");
+                var z= document.getElementById("btn");
+    
+                  function register(){
+                      x.style.left="-400px";
+                      y.style.left="50px";
+                      z.style.left="110px";
+                  }
+                  function login(){
+                      x.style.left="50px";
+                      y.style.left="450px";
+                      z.style.left="0";
+                  }
+            </script>
+            <!--this code is for the when you click out the login or registration page the form-box disappears -->
+            <script>
+                var modal= document.getElementById('login-form');
+                window.onclick= function(event)
+                {
+                    if(event.target == modal)
+                    {
+                        model.style.display="none";
+                    }
+                }
+            </script>
+    </body>
+</html>
