@@ -1,0 +1,153 @@
+body{
+    margin: 2px;
+    font-family: sans-serif;
+    font-weight: 400;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    min-height: 100vh;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.static-list{
+    margin-left: 10%;
+    margin-top: 2%;
+    width: 380px;
+    height: 380px;
+    position: relative;
+    
+    color: black;
+    background: rgba(0, 0, 0, 0.02);
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    
+}
+
+
+ h1{
+ position: relative;
+ font-size: 6vw;
+ color: transparent;
+ -webkit-text-stroke: 0.3vw transparent;
+ text-transform: uppercase;
+ margin:-4%;
+ }
+ h2{
+   position: relative;
+   font-size: 2vw;
+   color: rgb(33, 84, 104);
+   -webkit-text-stroke: 0.3vw transparent;
+   text-transform: uppercase;
+   margin-top:5%;
+   margin-left:-4%;
+   }
+ h1::before{
+   content: attr(data-text);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0%;
+   height: 100%;
+   color: #633ad4;
+   padding-bottom: 2px;
+   -webkit-text-stroke: 0vw transparent;
+   border-right: 2px solid transparent;
+   overflow: hidden;
+   animation: animate 6s linear infinite;
+ }
+ @keyframes animate
+ {
+    0%, 10%, 100%
+    {
+    width: 0;
+    }
+    70%, 90%
+    {
+    width: 100%;
+    }
+    }
+ 
+ 
+ .circle{
+   position: absolute;
+   border-radius: 50%;
+   background: #3399ff;
+   animation: ripple 15s infinite;
+   box-shadow: 0px 0px 1px 0px #508fb9;
+ }
+ 
+ .small{
+   width: 200px;
+   height: 200px;
+   left: -100px;
+   bottom: -100px;
+ }
+ 
+ .medium{
+   width: 400px;
+   height: 400px;
+   left: -200px;
+   bottom: -200px;
+ }
+ 
+ .large{
+   width: 600px;
+   height: 600px;
+   left: -300px;
+   bottom: -300px;
+ }
+ 
+ .xlarge{
+   width: 800px;
+   height: 800px;
+   left: -400px;
+   bottom: -400px;
+ }
+ 
+ .xxlarge{
+   width: 1000px;
+   height: 1000px;
+   left: -500px;
+   bottom: -500px;
+ }
+ 
+ .shade1{
+   opacity: 0.2;
+ }
+ .shade2{
+   opacity: 0.5;
+ }
+ 
+ .shade3{
+   opacity: 0.7;
+ }
+ 
+ .shade4{
+   opacity: 0.8;
+ }
+ 
+ .shade5{
+   opacity: 0.9;
+ }
+ 
+ @keyframes ripple{
+   0%{
+     transform: scale(0.8);
+   }
+ 
+   50%{
+     transform: scale(1.2);
+   }
+ 
+   100%{
+     transform: scale(0.8);
+   }
+ }
+
+
+ 
